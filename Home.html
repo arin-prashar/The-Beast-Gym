@@ -6,12 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Group RAP">
     <style>
-        button{
-            height:40px;
-            width:80px;
-            background-color: cyan;
-            color: crimson;
+        .tc1{
+    padding-top: 18px;
+    width: max-content;
+
+}
+.tc2{
+    padding-top: 18px;
+    padding-left: 625px;
+    width: max-content;
+
+}
+.tc3{
+    padding-top: 18px;
+    padding-left: 625px;
+    width: max-content;
+}
+button{
+        height:40px;
+        width:80px;
+        background-color: cyan;
+        color: crimson;
         }
+        .zoom {
+  padding: 50px;
+  transition: transform .4s; /* Animation */
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
     </style>
     <title>Home</title>
 </head>
@@ -50,23 +75,25 @@
         <h1 style="text-align:center;">Our Gyms</h1>
         <p><video width="1500px" height="750px" controls autoplay muted>
             <source src="Assests/h video.mp4" type="video/mp4"></p>
-            <table border="1">
+            <table border="0">
                 <tr>
-                <td>
-                <img src="Assests/h events1.png" width="500px" height="350px">
+                <td class="zoom">
+                <img src="Assests/h events1.png" width="400px" height="350px">
                 </td>
-                <td>
-                <img src="Assests/h events2.png" width="500px" height="350px">
+                <td class="zoom">
+                <img src="Assests/h events2.png" width="400px" height="350px">
                 </td>
-                <td>
-                <img src="Assests/h events3.png" width="490px" height="350px">
+                <td class="zoom">
+                <img src="Assests/h events3.png" width="400px" height="350px">
                 </td>
                 </tr>
             </table>
-
-
-
-
-
+            <table border="1" >
+                <tr>
+                    <td class="tc1"><a href=""><button>Terms And Conditions</button></a></td>
+                    <td class="tc2"><a href="Contact Us.html"><button>Contact Us</button></a></td>
+                    <td class="tc3"><a href=""><button>Privacy Policy</button></a></td>
+                </tr>
+            </table>
     </body>
 </html>

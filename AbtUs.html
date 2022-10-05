@@ -7,6 +7,15 @@
     <meta name="author" content="Group RAP">
     <title>About Us</title>
     <style>
+                .zoom {
+  padding: 50px;
+  transition: transform .4s; /* Animation */
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
         button{
             background: #808080;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #3fada8, #808080);  /* Chrome 10-25, Safari 5.1-6 */
@@ -73,7 +82,7 @@ background: linear-gradient(to left, #001510, #00bf8f); /* W3C, IE 10+/ Edge, Fi
             </table>
             <table class="tb" border="0">
                 <tr>
-                    <td><img src="Assests/abt.jpg" height="300px"width="300px"></td>
+                    <td class="zoom"><img src="Assests/abt.jpg" height="300px"width="300px"></td>
                     <td style="align-content: center;padding-left: 40px;">
                         <h1 style="font-size: 220%;">About Us</h1>
                         <h2 style="font-size: 175%;">The Beast Gym</h5>
