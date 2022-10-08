@@ -59,6 +59,15 @@ h2{
     padding-left: 650px;
     width: max-content;
 }
+.zoom1 {
+  padding-top:50px;
+  transition: transform .4s; /* Animation */
+  margin: 0 auto;
+}
+
+.zoom1:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
 
     </style>
 </head>
@@ -73,11 +82,11 @@ background: linear-gradient(to left, #001510, #00bf8f); /* W3C, IE 10+/ Edge, Fi
         <tr>
             <td style="padding-left: 20px;"><img src="Assests/Head.jpg" width="100px" height="90px"></td>
             <td class="wid" height="70px" style="font-size:200%;padding-left:250px; font-weight: bolder; font-size: 250%;">The Beast Gym</td>
-            <td style="padding-top:40px;padding-left:380px;"><button onclick="document.location='Home.html' "style="font-size:100%;">Home</button></td>
-            <td style="padding-top:40px;padding-left:25px;"><button onclick="document.location='' "style="font-size:100%;">Training</button></td>
-            <td style="padding-top:40px;padding-left:25px;"><button onclick="document.location=''"style="font-size:100%;">Timetable</button></td>
-            <td style="padding-top:40px;padding-left:25px;"><button onclick="document.location='ntr.html'"style="font-size:100%;">Nutrition</button></td>
-            <td style="padding-top:40px;padding-left:25px;"><button onclick="document.location=''"style="font-size:100%;">Gallery</button></td>
+            <td class="zoom1" style="padding-top:40px;padding-left:380px;"><button onclick="document.location='Home.html' "style="font-size:100%;">Home</button></td>
+            <td class="zoom1" style="padding-top:40px;padding-left:25px;"><button onclick="document.location='' "style="font-size:100%;">Training</button></td>
+            <td class="zoom1" style="padding-top:40px;padding-left:25px;"><button onclick="document.location=''"style="font-size:100%;">Timetable</button></td>
+            <td class="zoom1" style="padding-top:40px;padding-left:25px;"><button onclick="document.location='ntr.html'"style="font-size:100%;">Nutrition</button></td>
+            <td class="zoom1" style="padding-top:40px;padding-left:25px;"><button onclick="document.location=''"style="font-size:100%;">Gallery</button></td>
             </tr>
             </table>
             <table class="tb" border="0">
