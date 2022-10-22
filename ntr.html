@@ -7,7 +7,18 @@
     <meta name="author" content="Group RAP">
     <title>Nutrition</title>
 </head>
-<style>
+<style>.zoom1 {
+    padding-top:50px;
+    transition: transform .4s; /* Animation */
+    margin: 0 auto;
+  }
+  
+  .zoom1:hover {
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+  .wid{
+    width:max-content;
+}
     button{
         background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
         font-weight: bold;
@@ -38,17 +49,33 @@ body
     color:white;
     font-family: georgia;
 }
+.tc1{
+    padding-top: 18px;
+    width: max-content;
+
+}
+.tc2{
+    padding-top: 18px;
+    padding-left: 625px;
+    width: max-content;
+
+}
+.tc3{
+    padding-top: 18px;
+    padding-left: 625px;
+    width: max-content;
+}
 </style>
 <body>
-    <table border="0" style=" background-image: linear-gradient(to top, #09203f 0%, #537895 100%);">
+    <table border="0" style="background-image: linear-gradient(to top, #09203f 0%, #537895 100%);"">
         <tr>
             <td style="padding-left: 20px;"><img src="Assests/Head.jpg" width="100px" height="90px"></td>
             <td class="wid" height="70px" style="font-size:200%;padding-left:250px; font-weight: bolder; font-size: 250%;">The Beast Gym</td>
-            <td style="padding-top:40px;padding-left:380px;"><button onclick="document.location='Home.html' "style="font-size:100%;">Home</button></td>
-            <td style="padding-top:40px;padding-left:25px;"><button onclick="document.location='' "style="font-size:100%;">Training</button></td>
-            <td style="padding-top:40px;padding-left:25px;"><button onclick="document.location=''"style="font-size:100%;">Timetable</button></td>
-            <td style="padding-top:40px;padding-left:25px;"><button onclick="document.location='ntr.html'"style="font-size:100%;">Nutrition</button></td>
-            <td style="padding-top:40px;padding-left:25px;"><button onclick="document.location=''"style="font-size:100%;">Gallery</button></td>
+            <td class="zoom1" style="padding-top:40px;padding-left:380px;"><button onclick="document.location='Home.html' "style="font-size:100%;">Home</button></td>
+            <td class="zoom1" style="padding-top:40px;padding-left:25px;"><button onclick="document.location='' "style="font-size:100%;">Training</button></td>
+            <td class="zoom1" style="padding-top:40px;padding-left:25px;"><button onclick="document.location=''"style="font-size:100%;">Timetable</button></td>
+            <td class="zoom1" style="padding-top:40px;padding-left:25px;"><button onclick="document.location='ntr.html'"style="font-size:100%;">Nutrition</button></td>
+            <td class="zoom1" style="padding-top:40px;padding-left:25px;"><button onclick="document.location=''"style="font-size:100%;">Gallery</button></td>
             </tr>
             </table>
 <img src=""width=""height=""class="">
@@ -139,8 +166,13 @@ There are more than 40 different kinds of nutrients in food and they can general
 <p class="info">
     Water is the most abundant substance in human body and is also an essential nutrient to maintain our health. The major functions of water include regulation of body temperature, production of body fluids, transportation of nutrients and removal of waste products.
 </p>
-<br><hr>
-<img src="">
-<br><hr>
+<br>
+<table border="0" >
+    <tr>
+        <td class="tc1"><a href=""><button>Terms And Conditions</button></a></td>
+        <td class="tc2"><a href="Contact Us.html"><button>Contact Us</button></a></td>
+        <td class="tc3"><a href=""><button>Privacy Policy</button></a></td>
+    </tr>
+</table>
 </body>
 </html>
