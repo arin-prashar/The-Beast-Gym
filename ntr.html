@@ -19,18 +19,32 @@
   .wid{
     width:max-content;
 }
+         
     button{
-        background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+        border-width:0.1px ;
+        border-radius:8px 0 8px 0;
+        border-color:inherit ;
+        /*background-image: linear-gradient( 135deg, #79F1A4 10%, #0E5CAD 100%);*/
+        background-image: linear-gradient(to right, #F4D03F  51%, #16A085  100%);
+        transition: 0.5s;
         font-weight: bold;
+    }
+    button:hover{
+        background-image: linear-gradient(to left, #F4D03F  51%, #16A085  100%);
+        background-position: right center; /* change the direction of the change here */
+        color: #fff;
+          
     }
 body
 {
     /* background-color:#323268 ; */
-    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+    background: linear-gradient(to right, #fdfc47, #24fe41);
+
+    
 }
 .types
 {
-    color: white;
+    color: black;
     font-style: italic;
 }
 .image
@@ -46,7 +60,7 @@ body
 }
 .info
 {
-    color:white;
+    color:black;
     font-family: georgia;
 }
 .tc1{
@@ -67,15 +81,15 @@ body
 }
 </style>
 <body>
-    <table border="0" style="background-image: linear-gradient(to top, #09203f 0%, #537895 100%);"">
+    <table border="0" style="background-image: inherit();">
         <tr>
             <td style="padding-left: 20px;"><img src="Assests/Head.jpg" width="100px" height="90px"></td>
             <td class="wid" height="70px" style="font-size:200%;padding-left:250px; font-weight: bolder; font-size: 250%;">The Beast Gym</td>
-            <td class="zoom1" style="padding-top:40px;padding-left:380px;"><button onclick="document.location='Home.html' "style="font-size:100%;">Home</button></td>
-            <td class="zoom1" style="padding-top:40px;padding-left:25px;"><button onclick="document.location='' "style="font-size:100%;">Training</button></td>
-            <td class="zoom1" style="padding-top:40px;padding-left:25px;"><button onclick="document.location=''"style="font-size:100%;">Timetable</button></td>
-            <td class="zoom1" style="padding-top:40px;padding-left:25px;"><button onclick="document.location='ntr.html'"style="font-size:100%;">Nutrition</button></td>
-            <td class="zoom1" style="padding-top:40px;padding-left:25px;"><button onclick="document.location=''"style="font-size:100%;">Gallery</button></td>
+            <td class="zoom1" style="padding-top:40px;padding-left:380px;"><button class="btn-grad" onclick="document.location='Home.html' "style="font-size:100%;">Home</button></td>
+            <td class="zoom1" style="padding-top:40px;padding-left:25px;"><button  class="btn-grad"onclick="document.location='' "style="font-size:100%;">Training</button></td>
+            <td class="zoom1" style="padding-top:40px;padding-left:25px;"><button  class="btn-grad"onclick="document.location=''"style="font-size:100%;">Timetable</button></td>
+            <td class="zoom1" style="padding-top:40px;padding-left:25px;"><button  class="btn-grad"onclick="document.location='ntr.html'"style="font-size:100%;">Nutrition</button></td>
+            <td class="zoom1" style="padding-top:40px;padding-left:25px;"><button  class="btn-grad"onclick="document.location=''"style="font-size:100%;">Gallery</button></td>
             </tr>
             </table>
 <img src=""width=""height=""class="">
@@ -169,9 +183,9 @@ There are more than 40 different kinds of nutrients in food and they can general
 <br>
 <table border="0" >
     <tr>
-        <td class="tc1"><a href=""><button>Terms And Conditions</button></a></td>
-        <td class="tc2"><a href="Contact Us.html"><button>Contact Us</button></a></td>
-        <td class="tc3"><a href=""><button>Privacy Policy</button></a></td>
+        <td class="tc1"><a href=""><button class="btn-grad">Terms And Conditions</button></a></td>
+        <td class="tc2"><a href="Contact Us.html"><button class="btn-grad">Contact Us</button></a></td>
+        <td class="tc3"><a href=""><button class="btn-grad">Privacy Policy</button></a></td>
     </tr>
 </table>
 </body>
