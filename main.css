@@ -13,6 +13,7 @@ html,body, body * {
     background-position:center center;
     
   }
+
   .container {
       width: 100%;
       padding-top: 60px;
@@ -28,7 +29,10 @@ html,body, body * {
       border-radius: 5px;
       box-shadow: 0px 2px 7px rgba(0,0,0,0.2);
       overflow: hidden; 
-      background: linear-gradient(180deg, rgba(65,4,119,1) 0%, rgba(22,147,198,1) 58%, rgba(255,255,255,0.1407913507199755) 82%);
+      /*background: linear-gradient(180deg, rgba(65,4,119,1) 0%, rgba(22,147,198,1) 58%, rgba(255,255,255,0.1407913507199755) 82%);*/
+      background: #000000;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to bottom, #e74c3c, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to bottom, #e74c3c, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       color:#ffffff;
   }
 
