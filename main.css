@@ -9,8 +9,13 @@ html,body, body * {
  }
  body {
     background-image: url(Assests/pic1.jpg);
-    background-size:  cover;
-    background-position:center center;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin:0px;
+    background-attachment: fixed;
+    background-size: cover; 
+    background-color: #464646;
+    }
     
   }
 
