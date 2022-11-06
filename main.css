@@ -8,16 +8,13 @@ html,body, body * {
     background-color:inherit;
  }
  body {
-    background-image: url(Assests/pic1.jpg);
-    background-position: center;
+     background-position: center center;
     background-repeat: no-repeat;
-    margin:0px;
+    margin:0px; 
+    background-image: url(Assests/pic1.jpg);
     background-attachment: fixed;
     background-size: cover; 
-    background-color: #464646;
     }
-    
-  }
 
   .container {
       width: 100%;
