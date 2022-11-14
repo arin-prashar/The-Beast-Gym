@@ -6,6 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Group RAP">
     <style>
+        li,a,button{
+    font-family: "Montserrat",sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+}
+header,footer{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.logo{
+    width: 70px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.nav__lnk,.ftr_nav_lnk{
+    list-style:none;
+}
+.nav__lnk li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav__lnk li a{
+    transition: all 0.4s ease 0s;
+}
+.nav__lnk li a button{
+    font-weight: bold;
+    border: inherit;
+    background: inherit;
+    transition: transform .4s ease 0s;
+}
+.nav__lnk li a button:hover{
+    font-weight: bolder;
+    color: aqua;
+    transform: scale(1.2);
+}
         .tc1{
     padding-top: 18px;
     width: max-content;
@@ -61,17 +102,20 @@ body{
     </style>
     <title>Home</title>
 </head>
-<body><table border="0" style="background-image: radial-gradient(cyan,navy);width:max-content;">
-    <tr>
-        <td style="padding-left: 20px;"><img src="Assests/Head.svg" width="100px" height="90px"></td>
-        <td class="wid" height="70px" style="font-size:200%;padding-left:450px;">The Beast Gym</td>
-        <td class="zoom1" style="padding-left:200px;"><button onclick="document.location='Home.html' "style="font-size:100%;">Home</button></td>
-        <td class="zoom1" style="padding-left:25px;"><button onclick="document.location='' "style="font-size:100%;">Training</button></td>
-        <td class="zoom1" style="padding-left:25px;"><button onclick="document.location=''"style="font-size:100%;">Timetable</button></td>
-        <td class="zoom1" style="padding-left:25px;"><button onclick="document.location='ntr.html'"style="font-size:100%;">Nutrition</button></td>
-        <td class="zoom1" style="padding-left:25px;"><button onclick="document.location='gallery.html'"style="font-size:100%;">Gallery</button></td>
-        </tr>
-        </table>
+<body>
+    <header>
+    <img class="logo" src="Assets/Head.svg" alt="logo">
+    <h1 style="color:#251225;">The Beast Gym</h1>
+    <nav>
+        <ul class="nav__lnk">
+            <li><a href="home.html"><button>Home</button></a></li>
+            <li><a href="train.html"><button>Training</button></a></li>
+            <li><a href="timetable.html"><button>TimeTable</button></a></li>
+            <li><a href="ntr.html"><button>Nutrition</button></a></li>
+            <li><a href="gallery.html"><button>Gallery</button></a></li>
+        </ul>
+    </nav>
+</header>
         <table>
             <tr>
                 <td style="font-size: 250%;">UNISEX</td>
