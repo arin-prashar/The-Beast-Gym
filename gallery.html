@@ -79,6 +79,28 @@
     .card-1::before{
         background: linear-gradient(90deg, #b527cf 0%, #3546f0 100%);
     }
+    .flip-card-1{
+        position: relative;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+    .flip-card-1:hover .flip-card-1{
+        transform: rotateY('180deg');
+
+    }
+    /* .flip-card-front,
+    .flip-card-back{
+        position: absolute;
+        width: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 16px;
+    }
+    .flip-card-front{
+        background-image: 
+            linear-gradient()
+    } */
+
     .card-2{
         background-size: cover;
         transform: scale(1.01);
@@ -127,12 +149,24 @@
     .card-5::before{
         background: linear-gradient(90deg, #3bd9d9 0%, #8035f0 100%);
     }
+    .card-6{
+        background-size: cover;
+        transform: scale(1.01);
+        margin-right: 31px;
+    }
+    .card-6 :hover{
+        transform: scale(1.11);
+        box-shadow: -7px 4px 28px -3px #ff9500;
+    }
+    .card-6::before{
+        background: linear-gradient(90deg, #ff9500 0%, #d5cb0f 100%);
+    }
 </style>
 </head>
 <body>
     <div class="container">
         <div class="div-transform">
-            <div class="card card-1">
+            <div class="card card-1 flip-card-1">
                 <img src="https://content.active.com/Assets/Active.com+Content+Site+Digital+Assets/Fitness/Galleries/10+Fitness+Tips/Muscle-confusion-is-the-only-way-to-go..jpg" >   
             </div>
 
@@ -151,6 +185,12 @@
             <div class="card card-5">
                 <img src="https://www.fitnessfirst.net.in/sites/default/files/styles/style_600x250/public/club1.jpg?itok=oMBL0kAV">
             </div>
+
+            <div class="card card-6">
+                <img src="https://cdn.pixabay.com/photo/2017/08/07/14/02/man-2604149__480.jpg">
+            </div>
+
+
         </div>
     </div>
 </body>
