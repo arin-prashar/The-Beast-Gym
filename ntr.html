@@ -46,37 +46,9 @@ header,footer{
 }
 .nav__lnk li a button:hover{
     font-weight: bolder;
-    color: aqua;
+    color:maroon;
     transform: scale(1.2);
 }
-.zoom1 {
-    padding-top:50px;
-    transition: transform .4s; /* Animation */
-    margin: 0 auto;
-  }
-  
-  .zoom1:hover {
-    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  }
-  .wid{
-    width:max-content;
-}
-         
-    button{
-        border-width:0.1px ;
-        border-radius:8px 0 8px 0;
-        border-color:inherit ;
-        /*background-image: linear-gradient( 135deg, #79F1A4 10%, #0E5CAD 100%);*/
-        background-image: linear-gradient(to right, #F4D03F  51%, #16A085  100%);
-        transition: 0.5s;
-        font-weight: bold;
-    }
-    button:hover{
-        background-image: linear-gradient(to left, #F4D03F  51%, #16A085  100%);
-        background-position: right center; /* change the direction of the change here */
-        color: #fff;
-          
-    }
 body
 {
     background: linear-gradient(to right, #fdfc47, #24fe41);
@@ -92,37 +64,24 @@ body
     color: black;
     font-style: italic;
 }
-.image
-{
-    height:500px;
-    width: 400px;
-    float: middle;
-    border: 4px;
-    border-radius: 15px;
-    border-color: black;
-    border-style: double;
-    margin-left: 250px;
+.ftr_nav_lnk li{
+    display: inline-block;
+    padding: 0 20px;
 }
-.info
-{
-    color:black;
-    font-family: georgia;
-}
-.tc1{
-    padding-top: 18px;
-    width: max-content;
 
+.ftr_nav_lnk li a{
+    transition: all 0.4s ease 0s;
 }
-.tc2{
-    padding-top: 18px;
-    padding-left: 625px;
-    width: max-content;
-
+.ftr_nav_lnk li a button{
+    font-weight: bold;
+    border: inherit;
+    background: inherit;
+    transition: transform .4s ease 0s;
 }
-.tc3{
-    padding-top: 18px;
-    padding-left: 625px;
-    width: max-content;
+.ftr_nav_lnk li a button:hover{
+    font-weight: bolder;
+    color:crimson;
+    transform: scale(1.2);
 }
 </style>
 <body>
@@ -228,12 +187,16 @@ There are more than 40 different kinds of nutrients in food and they can general
     Water is the most abundant substance in human body and is also an essential nutrient to maintain our health. The major functions of water include regulation of body temperature, production of body fluids, transportation of nutrients and removal of waste products.
 </p>
 <br>
-<table border="0" >
-    <tr>
-        <td class="tc1"><a href=""><button class="btn-grad">Terms And Conditions</button></a></td>
-        <td class="tc2"><a href="Contact Us.html"><button class="btn-grad">Contact Us</button></a></td>
-        <td class="tc3"><a href=""><button class="btn-grad">Privacy Policy</button></a></td>
-    </tr>
-</table>
+<footer>
+    <div></div>
+    <nav>
+        <ul class="ftr_nav_lnk">
+            <li><a href="terms.html"><button>Terms and Conditions</button></a></li>
+            <li><a href="contact.html"><button>Contact Us</button></a></li>
+            <li><a href="privacy.html"><button>Privacy Policy</button></a></li>
+        </ul>
+    </nav>
+    <div></div>
+</footer>
 </body>
 </html>
