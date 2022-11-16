@@ -3,115 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="author" content="Group RAP">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <style>
-.zoom {
-  padding: 50px;
-  transition: transform .4s; /* Animation */
-  margin: 0 auto;
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-position: center;
+    background-repeat: no-repeat;
+    margin:0px;
+    background: linear-gradient(to top, #001510, #00bf8f);
+    background-attachment: fixed;
+    background-size: cover; 
+}
+li,a,button{
+    font-family: "Montserrat",sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+}
+header,footer{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 30px 10%;
 }
 
-.zoom:hover {
-  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+.logo{
+    width: 70px;
+    height: 60px;
+    cursor: pointer;
 }
-        button{
-            border-width:0.1px ;
-        border-radius:8px 0 8px 0;
-background: linear-gradient(to right, #3fada8, #808080); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-font-weight: bold;
-        }
-        button:hover{
-            background: linear-gradient(to left, #001510, #00bf8f);
-            
-        }
-        body{
-            background-position: center;
-            background-repeat: no-repeat;
-            margin:0px;
-            background: linear-gradient(to top, #001510, #00bf8f);
-            background-attachment: fixed;
-            background-size: cover; 
-            background-color: #464646;
-        }
-        .tb{
-            color:white;
-    padding-top: 160PX;
-    padding-left: 250px;
+
+.nav__lnk,.ftr_nav_lnk{
+    list-style:none;
 }
-.wid{
-    width:max-content;
+.nav__lnk li{
+    display: inline-block;
+    padding: 0 20px;
 }
-p{
-    font-size: large;
-    font-weight: bold
+
+.nav__lnk li a{
+    transition: all 0.4s ease 0s;
 }
-h1{
+.nav__lnk li a button{
+    font-weight: bold;
+    border: inherit;
+    background: inherit;
+    transition: transform .4s ease 0s;
+}
+.nav__lnk li a button:hover{
+    font-weight: bolder;
+    color: aqua;
+    transform: scale(1.2);
+}
+.mid{
+    display: inline-flex;
+}
+.sec{
+    width: fit-content;
+    height: fit-content;
+    padding: 0 40px;
+}
+.dv{
+    margin: 0 40px;
+    padding: 0 40px;
+    display:inline-block;
+    justify-content: space-between;
+    align-items: center;
+}
+.dv h3{
+    font-size: xx-large;
+    font-weight: bolder;
     text-align: center;
 }
-h2{
-    text-align: center;
+.dv p{
+    font-size:x-large;
+    font-weight: bold;
 }
-.tc1{
-    padding-top: 180px;
-    width: max-content;
-
-}
-.tc2{
-    padding-top: 180px;
-    padding-left: 650px;
-    width: max-content;
-
-}
-.tc3{
-    padding-top: 180px;
-    padding-left: 650px;
-    width: max-content;
-}
-.zoom1 {
-  padding-top:50px;
-  transition: transform .4s; /* Animation */
-  margin: 0 auto;
+.ftr_nav_lnk li{
+    display: inline-block;
+    padding: 0 20px;
 }
 
-.zoom1:hover {
-  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+.ftr_nav_lnk li a{
+    transition: all 0.4s ease 0s;
+}
+.ftr_nav_lnk li a button{
+    font-weight: bold;
+    border: inherit;
+    background: inherit;
+    transition: transform .4s ease 0s;
+}
+.ftr_nav_lnk li a button:hover{
+    font-weight: bolder;
+    color: aqua;
+    transform: scale(1.2);
 }
 
-    </style>
+</style>
 </head>
 <body>
-    <table border="0" style=" background: #00bf8f;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #001510, #00bf8f);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #001510, #00bf8f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    ">
-        <tr>
-            <td style="padding-left: 20px;"><img src="Assests/Head.png" width="100px" height="90px"></td>
-            <td class="wid" height="70px" style="font-size:200%;padding-left:250px; font-weight: bolder; font-size: 250%;">The Beast Gym</td>
-            <td class="zoom1" style="padding-top:40px;padding-left:380px;"><button onclick="document.location='Home.html' "style="font-size:100%;">Home</button></td>
-            <td class="zoom1" style="padding-top:40px;padding-left:25px;"><button onclick="document.location='' "style="font-size:100%;">Training</button></td>
-            <td class="zoom1" style="padding-top:40px;padding-left:25px;"><button onclick="document.location=''"style="font-size:100%;">Timetable</button></td>
-            <td class="zoom1" style="padding-top:40px;padding-left:25px;"><button onclick="document.location='ntr.html'"style="font-size:100%;">Nutrition</button></td>
-            <td class="zoom1" style="padding-top:40px;padding-left:25px;"><button onclick="document.location='gallery.html'"style="font-size:100%;">Gallery</button></td>
-            </tr>
-            </table>
-            <table class="tb" border="0">
-                <tr>
-                    <td class="zoom"><img src="Assests/abt.jpg" height="300px"width="300px"></td>
-                    <td style="align-content: center;padding-left: 40px;">
-                        <h1 style="font-size: 220%;">About Us</h1>
-                        <h2 style="font-size: 175%;">The Beast Gym</h5>
-                        <p style="font-size:125% ;">The Beast Gym is one among the biggest fitness clubs in India. We are a dedicated group of highly qualified fitness professionals that are focused on trying to put people on the right path to achieve peak fitness. We offer a dynamic fitness environment that keeps members motivated. Facilities include a cardio theater with state-of-the-art exercise machines, extensive free weights area, studios for yoga/ aerobics, Nutrition counseling and indoor cycling, personal training by professional trainers and changing rooms with steam baths and normal showers for both men and women. Whether you want to lose your weight, gain your weight, get stronger, or feel better, the intense training system will surely bring a noticeable change in the trainee’s body and life.</p>
-                    </td>
-                </tr>
-            </table>
-            <table border="0" >
-                <tr>
-                    <td class="tc1"><a href=""><button>Terms And Conditions</button></a></td>
-                    <td class="tc2"><a href="Contact Us.html"><button>Contact Us</button></a></td>
-                    <td class="tc3"><a href=""><button>Privacy Policy</button></a></td>
-                </tr>
-            </table>
+<header>
+    <img class="logo" src="Assests/Head.svg" alt="logo">
+    <h1 style="color:#251225;">The Beast Gym</h1>
+    <nav>
+        <ul class="nav__lnk">
+            <li><a href="home.html"><button>Home</button></a></li>
+            <li><a href="train.html"><button>Training</button></a></li>
+            <li><a href="timetable.html"><button>TimeTable</button></a></li>
+            <li><a href="ntr.html"><button>Nutrition</button></a></li>
+            <li><a href="gallery.html"><button>Gallery</button></a></li>
+        </ul>
+    </nav>
+</header>
+<article class="mid">
+    <img class="sec" src="Assests/abt.svg">
+    
+    <div class="dv">
+        <h3>About Us</h3>
+        <br><br>
+        <p>The Beast Gym is one  biggest fitness clubs in India. We are a dedicated group of highly qualified fitness professionals that are focused on trying to put people on the right path to achieve peak fitness. We offer a dynamic fitness environment that keeps members motivated. Facilities include a cardio theater with state-of-the-art exercise machines, extensive free weights area, studios for yoga/ aerobics, Nutrition counseling and indoor cycling, personal training by professional trainers and changing rooms with steam baths and normal showers for both men and women. Whether you want to lose your weight, gain your weight, get stronger, or feel better, the intense training system will surely bring a noticeable change in the trainee’s body and life.</p>
+    </div>
+</article>
+<footer>
+    <div></div>
+    <nav>
+        <ul class="ftr_nav_lnk">
+            <li><a href="terms.html"><button>Terms and Conditions</button></a></li>
+            <li><a href="contact.html"><button>Contact Us</button></a></li>
+            <li><a href="privacy.html"><button>Privacy Policy</button></a></li>
+        </ul>
+    </nav>
+    <div></div>
+</footer>
+    
 </body>
 </html>
