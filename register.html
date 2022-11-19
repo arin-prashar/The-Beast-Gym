@@ -2,195 +2,229 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Register Form</title>
+    <title>Login and Registration Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        /*** Reset styles ***/
-html,body, body * { 
-    box-sizing: border-box; 
-    font-family: 'Open Sans', sans-serif; 
-    margin:0;
-    padding:0;
-    color:inherit;
-    background-color:inherit;
- }
- body {
-    background-position: center center;
-    background-repeat: no-repeat;
-    margin:0px; 
-    background-image: url(Assests/pic1.jpg);
-    background-attachment: fixed;
-    background-size: cover; 
-    }
+        @import url('https://fonts.google.apis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-  .container {
-      width: 100%;
-      padding-top: 60px;
-      padding-bottom: 100px;
-  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:url('Assests/pic1.jpg');
+    background-position:center center;
+    background-size: cover;
+    /* background-repeat: no-repeat; */
 
-  .login-register {
-      height: 560px;
-      width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-      padding:0 2em;
-      border-radius: 5px;
-      box-shadow: 0px 2px 7px rgba(0,0,0,0.2);
-      overflow: hidden; 
-      /* background: linear-gradient(to bottom, #e74c3c, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-      background-color: transparent;
-      color:#ffffff;
-  }
+}
 
-  /* Nav Buttons  */
-  .nav-buttons {
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: 500px;
+    background: rgba(88, 88, 88, 0.25);
+    padding: 40px;
+}
+.form-wrapper{
+    display: flex;
+    align-items: center;
     width: 100%;
-    height: 100px;
-    padding-top: 40px;
-    opacity: 1;
-    margin-bottom: 3em;
-  }
-  button {
-      font-size: 1.5em;
-      margin-right:1em;
-      border:0px;
-      cursor: pointer;
-   
-  }
-  button:focus {
-      outline: 0px;
-  }
-  button.active {
-      padding-bottom: 10px;
-      border-bottom: solid 2px #1059FF;
-  } 
-  /* footer: forgot section */
-   #forgot {
-        position: relative;
-        height: 100px;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        padding-top: 24px;
-        margin-top: -300px; 
-        border-top: solid 1px rgba(255,255,255,.3);    
-    }
+    height: 100%;
+    transition: 1s ease-in-out;
+}
+.wrapper.active .form-wrapper.sign-in{
+    transform: scale(0) translate(-300px,500px);
+}
+.wrapper .form-wrapper.sign-up{
+    position: absolute;
+    top:0;
+    transform: scale(0);
+}
+.wrapper.active .form-wrapper.sign-up{
+    transform: scale(1) translate(0,0);
+}
+h2{
+    font-size: 30px;
+    color:#fff;
+    text-align: center;
+}
+.input-group{
+    position: relative;
+    margin: 30px 0;
+    border-bottom:2px solid #fff;
+}
+.input-group label{
+    position:absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+}
+.input-group input{
+    color:aquamarine;
+    width: 320px;
+    height: 40px;
+    font-size: 16px;
+    padding: 0 5px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transition: 0.5s ease;
+}
+.input-group input:focus~label,
+.input-group input:valid~label{
+    top:-5px;
+}
 
-    /* form styling */
-    .form-group input {
-        width: 100%;
-        height: 35px;
-        padding-left: 15px;
-        border: none;
-        border-radius: 5px;
-        margin-bottom: 20px;
-        background: rgba(255,255,255,.2);
-    }
-    .form-group label {
-      text-transform: uppercase;
-    }
-    input.submit {
-        font-weight: 700;
-        text-transform: uppercase;
-        font-size: 1em;
-        text-align: center;
-        color: rgba(255,255,255, 1);
-        padding: 8px 0px;
-        width: 100%;
-        height: 35px;
-        border: none;
-        border-radius: 20px;
-        margin-top: 23px;
-        background-color: rgba(16,89,255, 1);
-    
-    }
+.remeber{
+    margin: -5px 0 15px 5px;
+}
+.remeber label{
+    color: #fff;
+    font-size: 14px;    
+}
+.remeber label input{
+    accent-color: #f4157e;
+}
+button{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    color: #fff;
+    background: #f4157e;
+    border-radius:30px;
+    border: none;
+    outline: none;
+}
 
-    /* form positioning and animation */
-    form, #forgot { 
-        position: relative;
-        transition: all .5s ease;
-    }
-    #loginBtn, #registerBtn {
-        transition: all .5s ease;
+.signUp-link{
+    font-size: 14px;
+    text-align: center;
+    margin: 15px 0;
+}
+.signUp-link p{
+    color: #fff;   
+}
+.signUp-link p a{
+    color: #f4157e;
+    text-decoration: none;
+    font-weight: 500;
+}
+.signUp-link p a:hover{
+    text-decoration:underline;
+}
+.social-platform{
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+}
+.social-icons a{
+    display:inline-block;
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    margin: 15px 6px 0;
+    transition: 0.5s ease;
+}
+.social-icons a:hover{
+    background: #fff;
+}
+.social-icons a i{
+    color: #fff;
+    font-size: 14px;
+    transition: .3s ease;
+}
+.social-icons a:hover i{
+    color: inherit;
+}
 
-    }
-    form#loginform {
-    left:0px;
-    }
- 
-    form#registerform {
-    left:500px;
-    top:-230px;
-    opacity: 0;;
-   }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="login-register">
-            <div class="nav-buttons">
-                <button id="loginBtn" class='active' >Login </button>
-                <button id="registerBtn">Register</button>
-            </div>
-            <div class="form-group">
-                <form action="" id="loginform">
-                    <label for="username">username</label>
-                    <input type="text" id="username" style="border: 2px solid black;">
-                    <label for="password">password</label>
-                    <input type="password" id="password" style="border: 2px solid black;">
-                    <input type="submit" value="Submit" class="submit">
-                </form>
-                <form action="" id="registerform">
-                    <label for="fullname">fullname</label>
-                    <input type="text" id="fullname" style="border: 2px solid black;">
-                    <label for="email">email</label>
-                    <input type="text" id="email" style="border: 2px solid black;">
-                    <label for="passwword">password</label>
-                    <input type="password" id="password" style="border: 2px solid black;">
-                    <label for="confirmpassword">confirm password</label>
-                    <input type="password" id="confirmpassword" style="border: 2px solid black;">
-                    <input type="submit" value="Submit" class="submit">
-                </form>
-            </div>
-            <div id="forgot">
-                <a href="">forgot password?</a>
-            </div>
+
+    <div class="wrapper">
+        <div class="form-wrapper sign-in">
+            <form action="">
+                <h2>Sign In</h2>
+                <div class="input-group">
+                    <input type="text" required>
+                    <label for="">Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" required>
+                    <label for="">Password</label>
+                </div>
+                <div class="remeber">
+                        <label><input type="checkbox">  Remeber Me</label>
+                </div>
+                <button type="submit" onclick="alert('Server Not Active')">Sign In</button>
+                <div class="signUp-link">
+                    <p>Dont have a account?    <a href="#" class="signUpBtn-link">  Sign Up  </a></p>
+                </div>
+                <div class="social-platform">
+                    <p>Or sign in with</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-google"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </form>
         </div>
 
+        <div class="form-wrapper sign-up">
+            <form action="">
+                <h2>Sign Up</h2>
+                <div class="input-group">
+                    <input type="text" required>
+                    <label for="">Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" required>
+                    <label for="">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" required>
+                    <label for="">Password</label>
+                </div>
+                <div class="remeber">
+                        <label><input type="checkbox">I agree to terms and conditions</label>
+                </div>
+                <button type="submit" onclick="alert('Server Not Active')">Sign Up</button>
+                <div class="signUp-link">
+                    <p>Alredy have a account?   <a href="#" class="signInBtn-link">  Sign In  </a></p>
+                </div>
+            </form>
+        </div>
     </div>
-    <script>
-        var loginBtn = document.getElementById("loginBtn");
-        var registerBtn = document.getElementById("registerBtn");
-        var loginform = document.getElementById("loginform");
-        var registerform = document.getElementById("registerform");
-        var forgot = document.getElementById("forgot");
+<script>
+    const signUpBtnLink=document.querySelector('.signUpBtn-link');
+const signInBtnLink=document.querySelector('.signInBtn-link');
+const wrapper=document.querySelector('.wrapper');
 
-        registerBtn.onclick= function() {
-            registerform.style.left='0px';
-            registerform.style.opacity='1';
-            loginform.style.left='-500px';
-            loginform.style.opacity='0';
-            forgot.style.left='-500px';
-            forgot.style.opacity='0';
-            registerBtn.classList.add('active');
-            loginBtn.classList.remove('active');
+signUpBtnLink.addEventListener('click',()=>{
+    wrapper.classList.toggle('active');
+});
+signInBtnLink.addEventListener('click',()=>{
+    wrapper.classList.toggle('active');
+});
 
-        }
-
-        loginBtn.onclick= function() {
-            loginform.style.left='0px';
-            loginform.style.opacity='1';
-            forgot.style.left='0px';
-            forgot.style.opacity='1';
-            registerform.style='500px';
-            loginBtn.classList.add('active');
-            registerBtn.classList.remove('active');
-            registerform.style.opacity='0';
-        }
-
-
-        
-    </script>
+</script>
 </body>
 </html>
