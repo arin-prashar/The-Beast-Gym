@@ -5,7 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Group RAP">
+    <link rel="stylesheet" href="style.css">
     <style>
+        *
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 li,a,button{
     font-family: "Montserrat",sans-serif;
     font-weight: 500;
@@ -70,11 +79,148 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     margin:0px;
-    background: linear-gradient(to top, #001510, #00bf8f);
+    background-image: linear-gradient(to bottom, #FEE140 0%, #FA709A 100%);
     background-attachment: fixed;
-    background-size: cover; 
-    background-color: #464646; 
+    background-size: cover;  
    }
+
+   .body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding:50px 0;
+    gap: 60px;
+}
+.container .box{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .box::before{
+    content: '';
+    position:absolute;
+    inset:-10px 50px;
+    border-top:4px solid var(--clr);
+    border-bottom: 4px solid var(--clr);
+    z-index:-1;
+    transform:skewY(15deg);
+    transition:0.5s ease-in-out 
+}
+.container .box:hover::before{
+    transform: skewY(0deg);
+    inset:-10px 40px;
+}
+.container .box::after{
+    content: '';
+    position:absolute;
+    inset:60px -10px;
+    border-left:4px solid var(--clr);
+    border-right: 4px solid var(--clr);
+    z-index:-1;
+    transform:skew(15deg);
+    transition:0.5s ease-in-out 
+}
+.container .box:hover::after{
+    transform: skew(0deg);
+    inset:40px -10px;
+}
+.container .box .content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 0 20px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.container .box .content .icon{
+    color: var(--clr);
+    width: 80px;
+    height: 80px;
+    box-shadow: 0 0 0 4px black,0 0 0 6px var(--clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    background: black;
+    transition: 0.5s ease-in-out;
+}
+.container .box:hover .content .icon{
+    background: var(--clr);
+    color: black;
+    box-shadow: 0 0 0 4px black,0 0 0 300px var(--clr);
+}
+.container .box .content .text h3{
+    font-size:1em;
+    color:#fff;
+    font-weight: 500;
+    transition: 0.5s ease-in-out;
+}
+.container .box:hover .content .text h3{
+    color:rgb(255, 255, 255);
+
+}
+.container .box .content .text h5{
+    font-size:1em;
+    color:#fff;
+    font-weight: 500;
+    transition: 0.5s ease-in-out;
+}
+.container .box:hover .content .text h5{
+    color:azure;
+
+}
+.container .box .content .text ul{
+    list-style: none;
+    color: rgb(188, 153, 153);
+    transition: 0.5s ease-in-out;
+}
+.container .box:hover .content .text ul{
+    color:greenyellow;
+    
+
+}
+.container .box .content .text a{
+    position: relative;
+    background: var(--clr);
+    color: black;
+    padding:8px 15px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top:10px;
+    transition:0.5s ease-in-out;
+}
+.container .box:hover .content .text a{
+    background: black;
+    color:var(--clr);
+}
+.vid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0 10px;
+}
+.vid video{
+    height:650px;
+    width:900px;
+}
     </style>
     <title>Home</title>
 </head>
@@ -93,7 +239,43 @@ body{
     </nav>
 </header>
 <article>
-    
+    <h3 style="text-align: center;font-size:xx-large;font-weight: bold;"><mark>Free Registration</mark></h3>
+    <img style="margin:0 18%;" src="Assests/home1.svg"><br><br>
+    <div style="margin:0 3%"><h3 style="text-align: center;font-size:xx-large;font-weight: bold;">Get Fit Club</h3><br>
+    <p style="font-size:larger;font-weight: bold;">Get Fit Club started by The Beast Gym is one of the leading businesses in the Gyms. Also known for Health Clubs and much more. Find Address, Contact Number, Reviews & Ratings, Photos, Maps of The Beast GYM,Ropar.
+
+        
+        All scientific evidence and studies prove that being physically active enables you to lead a healthier life. Not just your physical health, but even your emotional and mental well-being is impacted positively when your body is hail and hearty. In the pursuit of holistic wellness, there has been an overall increase across all demographics in the number of people who wish to exercise.
+        
+        Several Gyms have mushroomed in and around Delhi. Get Fit Gym in Shahdara, Delhi is a popular choice among fitness enthusiasts in the area. It has received an average 4.5 rating. Here is a list of their offerings: Cardio Equipment, Strength Training Equipment. Of course, a gym may help you build muscles and look fab. But remember people who regularly exercise have a lower risk of developing several health concerns, so you might want to check out this place.
+        
+        </p>
+    </div>
+    <div class="vid">    
+        <video src="Assests/hvideo.mp4" muted autoplay></video>
+        </div>
+    <div class="body">
+        <div style="padding-right:100px;"><img src="Assests/himgae1.png"></div>
+    <div class="container">
+        <div class="box" style="--clr: #8c0eba">
+            <div class="content">
+                <div class="icon"><ion-icon name="barbell-outline"></ion-icon></div>
+                <div class="text">
+                <h3>Memebership Plan</h3>
+                <h5>&#x20B9;399/m</h5>
+                <ul>
+                    <li>20% off on proteins and pre-workout</li>
+                    <li>Access to all gym equipments</li>
+                    <li>Personal Trainer</li>
+                    <li>Flexible Training Hours</li>
+                    <a href="register.html">Buy Now</a>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="padding-left:100px;"><img src="Assests/himgae1.png"></div>
+    </div>
 </article>
 <footer>
     <div></div>
@@ -106,5 +288,8 @@ body{
     </nav>
     <div></div>
 </footer>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
     </body>
 </html>
