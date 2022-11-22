@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Group RAP">
     <title>Contact Us</title>
     <style>
-        li,a,button{
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:ital,wght@1,600&display=swap');
+
+*{
+ margin: 0; 
+ padding: 0;
+ box-sizing:border-box;
+ font-family: 'Poppins',sans-serif;  
+}
+body{
+    background: linear-gradient(90deg,#0e3959 0%,#0e3959 30%,#03a9f5 30%,#03a9f5 100%);
+}
+li,a,button{
     font-family: "Montserrat",sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -45,17 +55,168 @@ header{
 }
 .nav__lnk li a button:hover{
     font-weight: bolder;
-    color:orangered;
+    color: aqua;
     transform: scale(1.2);
 }
-body{
-            background-position: center;
-            background-repeat: no-repeat;
-            margin:0px;
-            background: linear-gradient(to right, #3fada8, #808080);
-            background-attachment: fixed;
-            background-size: cover; 
-        }
+.contactUs{
+    position: relative;
+    width: 100%;
+    padding: 40px 100px;
+}
+.contactUs .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+.contactUs .title h2{
+    color: aliceblue;
+    font-weight: 500;
+}
+.form{
+    grid-area: form;
+}
+.info{
+    grid-area: info;
+}
+.map{
+    grid-area: map;
+}
+.contact{
+    padding: 40px;
+    background: #fff;
+    box-shadow:0 5px 35px rgba(0,0,0,.15);
+    margin-top:20px ;
+}
+.box{
+    position: relative;
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows:5fr 4fr;
+    grid-template-areas:
+    'form info'
+    'form map';
+    grid-gap: 20px;
+}
+.contact h3{
+    color: #0e3959;
+    font-weight:500;
+    font-size: 1.4em;
+    margin-bottom:10px;
+}
+
+/* form */
+
+.formBox{
+    position: relative;
+    width: 100%;
+}
+.formBox .row50{
+    display: flex;
+    gap: 20px;
+}
+
+.inputBox{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 50%;
+}
+.formBox .row100 .inputBox{
+    width: 100%;
+}
+.inputBox span{
+    color: #18b7ff;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.inputBox input{
+    padding: 10px;
+    font-size: 1.1em;
+    outline: none;
+    border: 1px solid #333;
+}
+.inputBox textarea{
+    padding: 10px;
+    font-size: 1.1em;
+    outline: none;
+    border: 1px solid #333;
+    resize: none;
+    min-height: 220px;
+    margin-bottom: 10px;    
+}
+.inputBox input[type="submit"]{
+    background:#ff578b;    
+    color:#fff;
+    border: none;
+    font-size: 1.1em;
+    max-width: 120px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 14px 15px;
+}
+.inputBox::placeholder{
+    color: rgb(171, 171, 171);
+}
+
+/* Info */
+.info{
+    background: #0e3959;
+}
+.info h3{
+    color: #fff;
+}
+.info .infoBox div{
+    display: flex;
+    align-items: center;
+    margin-bottom:10px;
+}
+.info .infoBox div span{
+    min-width: 40px;
+    height: 40px;
+    color: #fff;
+    background: #18b7ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.info .infoBox div p{
+    color: #fff;
+    font-size: 1.1em;
+}
+.info .infoBox div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1em;
+}
+.sci{
+    margin-top: 40px;
+    display: flex;
+}
+.sci li{
+    list-style: none;
+    margin-right: 15px;
+}
+.sci li a{
+    font-size: 2em;
+    color: #ccc;
+
+}
+.sci li a:hover{
+    color: #fff;
+}
+.map{
+    padding: 0;
+}
+.map iframe{
+    width: 100%;
+    height: 100%;
+}
+
     </style>
 </head>
 <body>
@@ -72,65 +233,94 @@ body{
             </ul>
         </nav>
     </header>
-    <br>
-<br>
-<p style="padding-left:400px;"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3421.5518966748514!2d76.53486752509028!3d30.95507732258029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390555f34e48e64b%3A0x6e71b92bf46cea19!2sThe%20Beast%20Gym!5e0!3m2!1sen!2sin!4v1664631488742!5m2!1sen!2sin" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> </p>
-<h style="padding-left:500px;font-size:250%;">
-    We'd Love To Hear From You
-    </h>
-    <p style="padding-left:285px;">
-    To make sure you’re getting connected with the appropriate Anytime Fitness franchise group, please refer to the list of scenarios below.
-    </p>
-<br>
-<br>
-<table>
-    <tr><td style="padding-left:190px;">
-    <img src="Assests/contact2.png" width="100px" height="100px">
-    </td>
-    <td style="padding-left:280px;">
-    <img src="Assests/contact3.png" width="100px" height="100px">
-    </td>
-    <td style="padding-left:380px;">
-    <a href="mailto:info_getfit@gmail.com"><img src="Assests/contact1.png" width="100px" height="100px"></a>
-    </td></tr>
-    <tr><td>
-    <h style="padding-left:180px;font-size:150%;font-style:bold;">
-    Head Office
-    </h>
-    <p style="padding-left:150px;">Kotla Nihang, Rupnagar, Punjab 140001</div></p>
-    </td>
-    <td>
-    <h style="padding-left:290px;font-size:150%;font-style:bold;">
-    Call Us
-    </h>
-    <p style="padding-left:270px;">
-    +91 1234567890
-    </p></br></br></td>
-    <td>
-    <h style="padding-left:395px;font-size:150%;font-style:bold;">
-    Mail Us
-    </h>
-    <p style="padding-left:360px;">
-    <a href="mailto:info_getfit@gmail.com">info_getfit@gmail.com</a>
-    </p></br></br>
-    </td></tr></table></br>
-    <h style="padding-left:610px;font-size:250%;">
-    Give us feedback!
-    </h>
-    <p style="padding-left:440px;">
-    To Provide feedback for a specific club (e.g. great services, suggestions, etc. ) click the link below.
-    </p>
-    
-    <br>
-    <table>
-    <tr>
-        <td>
-    <a href="">Terms of Use</a>
-    </td><br>
-    <td style="padding-left:1270px;">
-    <a href="privacy.html">Privacy Policy</a>
-    </td></tr>
-    </table>
 
+    <div class="contactUs">
+        <div class="title">
+            <h2>Get In Touch</h2>
+        </div>
+        <div class="box">
+            <!-- Form -->
+            <div class="contact form">
+                <h3>Send a Message </h3>
+                <form>
+                    <div class="formBox">
+                        <div class="row50">
+                            <div class="inputBox">
+                                <span>First name</span>
+                                <input type="text" placeholder='John'>
+                            </div>
+                            <div class="inputBox">
+                                <span>Last name</span>
+                                <input type="text" placeholder='Doe'>
+                            </div>
+                        </div>
+
+                        <div class="row50">
+                            <div class="inputBox">
+                                <span>Email Address</span>
+                                <input type="email" placeholder='johndoe@gmail.com'>
+                            </div>
+                            <div class="inputBox">
+                                <span>Mobile Number</span>
+                                <input type="tel" placeholder='+91 321 465 9878'>
+                            </div>
+                        </div>
+                        <div class="row100">
+                            <div class="inputBox">
+                                <span>Message</span>
+                                <textarea placeholder="Write your message here ......"></textarea>    
+                            </div>
+                        </div>
+
+                        <div class="row100">
+                            <div class="inputBox">
+                                <input type="submit" value="Send">
+                            </div>
+                        </div>
+
+
+                    </div>
+                </form>
+            </div>
+
+
+            <!-- Info Box -->
+            <div class="contact info">
+                <h3>Contact Info</h3>
+                <div class="infoBox">
+                    <div>
+                        <span><ion-icon name="location"></ion-icon></span>
+                        <p>Kotla Nihang, Rupnagar<br>Punjab</p>
+                        </div>
+                        <div>
+                            <span><ion-icon name="mail"></ion-icon></span>
+                            <a href="mailto:info@beastgym.com">info@beastgym.com</a>
+                        </div>
+                        <div>
+                            <span><ion-icon name="call"></ion-icon></span>
+                            <a href="tel:+91789461230">+91 789 456 1230</a>
+                        </div>
+                        <!-- Social Links -->
+                        <ul class="sci">
+                            <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                            <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                            <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                            <li><a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+
+                        </ul>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="contact map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3421.5518966748514!2d76.53486752509028!3d30.95507732258029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390555f34e48e64b%3A0x6e71b92bf46cea19!2sThe%20Beast%20Gym!5e0!3m2!1sen!2sin!4v1664631488742!5m2!1sen!2sin"style="border:0;" allowfullscreen="flase" loading="lazy"></iframe> 
+            </div>
+            
+        </div>
+
+    
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
