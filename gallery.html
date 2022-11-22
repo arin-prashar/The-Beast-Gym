@@ -71,14 +71,19 @@
     .card-1::before{
         background: linear-gradient(90deg, #b527cf 0%, #3546f0 100%);
     }
+    .flip-card{
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+    }
     .flip-card-1{
         position: relative;
         transition: transform 0.6s ease 0s;
         transform-style: preserve-3d;
     }
     .flip-card-1:hover .flip-card-1{
-        transform: rotateY('180deg');
-
+        transform: rotateY('180deg'); 
     }
     .card-2{
         background-size: cover;
