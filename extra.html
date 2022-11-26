@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Group RAP">
+    <title>Gallery</title>
+
+<style>
+    *{
+        font-family: "Roboto";
+    }
+    html,body{
+        height: 100vh;
+        margin:0;
+        padding: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin:0px;
+        background-attachment: fixed;
+        background-size: cover;
+        background-color: #020e26;
+    }
+    .container{
+        display: flex;
+        height: fit-content;
+        align-items: center;
+        justify-content: space-between;
+        perspective: 90rem;
+        perspective-origin: 30% 60%;
+    }
+    img{
+        width: 240px;
+        height: 300px;
+        padding: 15px 25px 7px 1px;
+    }
+    .div-transform{
+        display: flex;
+        transform: rotateX('10deg') rotateY('15deg') rotateZ('-9deg') scale3d(1,1,-0.9) scale(1.1);
+    }
+    .card{
+        background: url("https://asapkerala.gov.in/wp-content/uploads/2021/10/Fitness-Trainer-1.jpg")center;
+        color:#ffffff;
+        border-radius: 8px;
+        padding: 0px 18px;
+        width: 244px;
+        transition: 0.5s ease;
+        overflow: hidden;
+        transform: translate(0);
+    }
+    .card::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        opacity: 0.85;
+    }
+    .card-1{
+        background-size: cover;
+        transform: scale(1.02);
+        margin-right: 40px;
+    }
+    .card-1 :hover{
+        transform: scale(1.11);
+        box-shadow: -7px 4px 28px -3px #b527cf;
+    }
+    .card-1::before{
+        background: linear-gradient(90deg, #b527cf 0%, #3546f0 100%);
+    }
+    .flip-card{
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+    }
+    .flip-card-1{
+        position: relative;
+        transition: transform 0.6s ease 0s;
+        transform-style: preserve-3d;
+    }
+    .flip-card-1:hover .flip-card-1{
+        transform: rotateY('180deg'); 
+    }
+    .card-2{
+        background-size: cover;
+        transform: scale(1.01);
+        margin-right: 31px;
+    }
+    .card-2 :hover{
+        transform: scale(1.11);
+        box-shadow: -7px 4px 28px -3px #3bd9d9;
+    }
+    .card-2::before{
+        background: linear-gradient(90deg, #3bd9d9 0%, #8035f0 100%);
+    }
+    .card-3{
+        background-size: cover;
+        transform: scale(1.01);
+        margin-right: 31px;
+    }
+    .card-3 :hover{
+        transform: scale(1.11);
+        box-shadow: -7px 4px 28px -3px #ff9500;
+    }
+    .card-3::before{
+        background: linear-gradient(90deg, #ff9500 0%, #d5cb0f 100%);
+    }
+    .card-4{
+        background-size: cover;
+        transform: scale(1.02);
+        margin-right: 40px;
+    }
+    .card-4 :hover{
+        transform: scale(1.11);
+        box-shadow: -7px 4px 28px -3px #b527cf;
+    }
+    .card-4::before{
+        background: linear-gradient(90deg, #b527cf 0%, #3546f0 100%);
+    }
+    .card-5{
+        background-size: cover;
+        transform: scale(1.01);
+        margin-right: 31px;
+    }
+    .card-5 :hover{
+        transform: scale(1.11);
+        box-shadow: -7px 4px 28px -3px #3bd9d9;
+    }
+    .card-5::before{
+        background: linear-gradient(90deg, #3bd9d9 0%, #8035f0 100%);
+    }
+    .card-6{
+        background-size: cover;
+        transform: scale(1.01);
+        margin-right: 31px;
+    }
+    .card-6 :hover{
+        transform: scale(1.11);
+        box-shadow: -7px 4px 28px -3px #ff9500;
+    }
+    .card-6::before{
+        background: linear-gradient(90deg, #ff9500 0%, #d5cb0f 100%);
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div></div>
+        <div class="div-transform">
+            <div class="card card-1 flip-card-1">
+                <img src="https://content.active.com/Assets/Active.com+Content+Site+Digital+Assets/Fitness/Galleries/10+Fitness+Tips/Muscle-confusion-is-the-only-way-to-go..jpg" >   
+            </div>
+
+            <div class="card card-2">
+                <img src="https://burst.shopifycdn.com/photos/cross-fit-rope-workout.jpg?width=500&format=pjpg&exif=1&iptc=1">
+            </div>
+               
+            <div class="card card-3">
+                <img src="https://images.pexels.com/photos/2294361/pexels-photo-2294361.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+            </div>
+        </div>
+        <div></div>
+    </div>
+    <br>
+    <br>
+    <br>
+        <div class="container">
+            <div></div>
+            <div class="div-transform">
+            <div class="card card-4">
+                <img src="https://cdn.pixabay.com/photo/2016/03/27/07/08/man-1282232__340.jpg">
+            </div>
+               
+            <div class="card card-5">
+                <img src="https://www.fitnessfirst.net.in/sites/default/files/styles/style_600x250/public/club1.jpg?itok=oMBL0kAV">
+            </div>
+
+            <div class="card card-6">
+                <img src="https://cdn.pixabay.com/photo/2017/08/07/14/02/man-2604149__480.jpg">
+            </div>
+            <div></div>
+        </div>
+    </div>
+</body>
+</html>
