@@ -61,7 +61,7 @@ h2{
 .input-group{
     position: relative;
     margin: 30px 0;
-    border-bottom:2px solid #fff;
+    border-bottom:2px double yellowgreen;
 }
 .input-group label{
     position:absolute;
@@ -73,7 +73,7 @@ h2{
     pointer-events: none;
 }
 .input-group input{
-    color:aquamarine;
+    color:black;
     width: 320px;
     height: 40px;
     font-size: 16px;
@@ -85,6 +85,9 @@ h2{
 }
 .input-group input:focus~label,
 .input-group input:valid~label{
+    font-weight: 800;
+    text-shadow: 1px 1px 2px red, 0 0 1em yellowgreen, 0 0 0.2em aqua;
+    color: black;
     top:-5px;
 }
 
@@ -161,20 +164,20 @@ button{
 
     <div class="wrapper">
         <div class="form-wrapper sign-in">
-            <form action="" autocomplete="off">
+            <form name="myformSignIn" method="post" action="#" autocomplete="off"onsubmit="return validateSIn()">
                 <h2>Sign In</h2>
                 <div class="input-group">
-                    <input type="text" required>
+                    <input name="Uname"type="text">
                     <label for="">Username</label>
                 </div>
                 <div class="input-group">
-                    <input type="password" required>
+                    <input name='passwd'type="password">
                     <label for="">Password</label>
                 </div>
                 <div class="remeber">
                         <label><input type="checkbox">  Remeber Me</label>
                 </div>
-                <button type="submit" onclick="alert('Server Not Active')">Sign In</button>
+                <button type="submit">Sign In</button>
                 <div class="signUp-link">
                     <p>Dont have a account?    <a href="#" class="signUpBtn-link">  Sign Up  </a></p>
                 </div>
@@ -190,24 +193,24 @@ button{
         </div>
 
         <div class="form-wrapper sign-up">
-            <form action="" autocomplete="off">
+            <form name ="myformSignUp" action="#" method="Post" autocomplete="off" onsubmit="return validateSUp()">
                 <h2>Sign Up</h2>
                 <div class="input-group">
-                    <input type="text" required>
+                    <input name="Uname" type="text">
                     <label for="">Username</label>
                 </div>
                 <div class="input-group">
-                    <input type="email" required>
+                    <input name="mail" type="email">
                     <label for="">Email</label>
                 </div>
                 <div class="input-group">
-                    <input type="password" required>
+                    <input name="passwd" type="password">
                     <label for="">Password</label>
                 </div>
                 <div class="remeber">
-                        <label><input type="checkbox">I agree to terms and conditions</label>
+                        <label><input name="accept" type="checkbox">   I agree to <a href="terms.html" style="text-decoration:none;color: aqua;">  Terms and Conditions</a></label>
                 </div>
-                <button type="submit" onclick="alert('Server Not Active')">Sign Up</button>
+                <button type="submit">Sign Up</button>
                 <div class="signUp-link">
                     <p>Alredy have a account?   <a href="#" class="signInBtn-link">  Sign In  </a></p>
                 </div>
@@ -215,7 +218,7 @@ button{
         </div>
     </div>
 <script>
-    const signUpBtnLink=document.querySelector('.signUpBtn-link');
+const signUpBtnLink=document.querySelector('.signUpBtn-link');
 const signInBtnLink=document.querySelector('.signInBtn-link');
 const wrapper=document.querySelector('.wrapper');
 
@@ -224,8 +227,45 @@ signUpBtnLink.addEventListener('click',()=>{
 });
 signInBtnLink.addEventListener('click',()=>{
     wrapper.classList.toggle('active');
-});
 
+});
+function validateSIn(){
+    var namesin=document.myformSignIn.Uname.value;
+    var pswdsin=document.myformSignIn.passwd.value;
+    if (namesin==null || namesin==""){
+        alert("Username Could not be Blank!!");
+        return false;
+    }
+    else if(pswdsin.length<6){
+        alert("Password too short!!")
+        return false;
+    }
+function validateSUp(){;
+    var chkbxsup=document.myformSignUp.accept.value;
+    var namesup =document.myformSignUp.Uname.value;
+    var pswdsup =document.myformSignUp.passwd.value;
+    var mailsup =document.myformSignUp.mail.value;
+    //check box validation
+    if(chkbxsup==null || chkbxsup==""){
+        alert("Please accept the terms and conditions");
+        return false;
+    }
+    else if (namesup==null || namesup==""){
+        alert("Username Could not be Blank!!");
+        return false;
+    }
+    else if(pswdsup.length<6){
+        alert("Password too short!!");
+        return false;
+    }
+    else if(mailsup==null || mailsup==""){
+        alert("Email Could not be Blank!!");
+        return false;
+    return false;
+    }
+}
+
+}
 </script>
 </body>
 </html>
