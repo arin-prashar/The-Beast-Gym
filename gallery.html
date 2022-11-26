@@ -1,184 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Group RAP">
-    <title>Gallery</title>
-
 <style>
-    *{
-        font-family: "Roboto";
+body{
+    margin: 0;
+    background: #2A2734;
+    text-align: center;
+    font-family: sans-serif;
+    color: #fefefe;
+}
+.container{
+    position: relative;
+    width: 320px;
+    margin: 100px auto 0 auto;
+    perspective: 1000px;
+}
+.carousel{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: rotate360 60s infinite forwards linear;
+}
+.image{
+    position: absolute;
+    width: 300px;
+    height: 187px;
+    top: 20px;
+    left: 10px;
+    right: 10px;
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.5);
+    display: flex;
+}
+span{
+    margin: auto;
+    font-size: 2rem;
+}
+@keyframes rotate360{
+    0%{
+        transform: rotateY(0deg);
     }
-    html,body{
-        height: 100vh;
-        margin:0;
-        padding: 0;
-        background-position: center;
-        background-repeat: no-repeat;
-        margin:0px;
-        background-attachment: fixed;
-        background-size: cover;
-        background-color: #020e26;
+    100%{
+        transform: rotateY(-360deg)
     }
-    .container{
-        display: flex;
-        height: fit-content;
-        align-items: center;
-        justify-content: space-between;
-        perspective: 90rem;
-        perspective-origin: 30% 60%;
-    }
-    img{
-        width: 240px;
-        height: 300px;
-        padding: 15px 25px 7px 1px;
-    }
-    .div-transform{
-        display: flex;
-        transform: rotateX('10deg') rotateY('15deg') rotateZ('-9deg') scale3d(1,1,-0.9) scale(1.1);
-    }
-    .card{
-        background: url("https://asapkerala.gov.in/wp-content/uploads/2021/10/Fitness-Trainer-1.jpg")center;
-        color:#ffffff;
-        border-radius: 8px;
-        padding: 0px 18px;
-        width: 244px;
-        transition: 0.5s ease;
-        overflow: hidden;
-        transform: translate(0);
-    }
-    .card::before{
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        opacity: 0.85;
-    }
-    .card-1{
-        background-size: cover;
-        transform: scale(1.02);
-        margin-right: 40px;
-    }
-    .card-1 :hover{
-        transform: scale(1.11);
-        box-shadow: -7px 4px 28px -3px #b527cf;
-    }
-    .card-1::before{
-        background: linear-gradient(90deg, #b527cf 0%, #3546f0 100%);
-    }
-    .flip-card-1{
-        position: relative;
-        transition: transform 0.6s ease 0s;
-        transform-style: preserve-3d;
-    }
-    .flip-card-1:hover .flip-card-1{
-        transform: rotateY('180deg');
+}
+.image:nth-child(l){
+    background-image: url("https://rukminim1.flixcart.com/image/416/416/k3ncakw0/sticker/y/6/m/gym-fitness-bodybuilding-sport-workout-creative-colorful-word-original-imafmqmqqgz2bymz.jpeg?q=70");
+    transform: rotateY(0deg)translateZ(430px);
+}
 
-    }
-    .card-2{
-        background-size: cover;
-        transform: scale(1.01);
-        margin-right: 31px;
-    }
-    .card-2 :hover{
-        transform: scale(1.11);
-        box-shadow: -7px 4px 28px -3px #3bd9d9;
-    }
-    .card-2::before{
-        background: linear-gradient(90deg, #3bd9d9 0%, #8035f0 100%);
-    }
-    .card-3{
-        background-size: cover;
-        transform: scale(1.01);
-        margin-right: 31px;
-    }
-    .card-3 :hover{
-        transform: scale(1.11);
-        box-shadow: -7px 4px 28px -3px #ff9500;
-    }
-    .card-3::before{
-        background: linear-gradient(90deg, #ff9500 0%, #d5cb0f 100%);
-    }
-    .card-4{
-        background-size: cover;
-        transform: scale(1.02);
-        margin-right: 40px;
-    }
-    .card-4 :hover{
-        transform: scale(1.11);
-        box-shadow: -7px 4px 28px -3px #b527cf;
-    }
-    .card-4::before{
-        background: linear-gradient(90deg, #b527cf 0%, #3546f0 100%);
-    }
-    .card-5{
-        background-size: cover;
-        transform: scale(1.01);
-        margin-right: 31px;
-    }
-    .card-5 :hover{
-        transform: scale(1.11);
-        box-shadow: -7px 4px 28px -3px #3bd9d9;
-    }
-    .card-5::before{
-        background: linear-gradient(90deg, #3bd9d9 0%, #8035f0 100%);
-    }
-    .card-6{
-        background-size: cover;
-        transform: scale(1.01);
-        margin-right: 31px;
-    }
-    .card-6 :hover{
-        transform: scale(1.11);
-        box-shadow: -7px 4px 28px -3px #ff9500;
-    }
-    .card-6::before{
-        background: linear-gradient(90deg, #ff9500 0%, #d5cb0f 100%);
-    }
-</style>
+.image:nth-child(2){
+    background-image: url("https://images.pexels.com/photos/2294361/pexels-photo-2294361.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    transform: rotateY(40deg)translateZ(430px);
+}
+
+.image:nth-child(3){
+    background-image: url("https://www.betterup.com/hs-fs/hubfs/man-meditating-in-lotus-pose.jpg?width=866&name=man-meditating-in-lotus-pose.jpg");
+    transform: rotateY(80deg)translateZ(430px);
+}
+.image:nth-child(4){
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRypStuBjnNVYcEBlbl0PVBX4_zOoAn5RasiA&usqp=CAU");
+    transform: rotateY(120deg)translateZ(430px);
+}
+.image:nth-child(5){
+    background-image: url("https://cdn.pixabay.com/photo/2016/03/27/07/08/man-1282232__340.jpg");
+    transform: rotateY(160deg)translateZ(430px);
+}
+.image:nth-child(6){
+    background-image: url("https://www.fitnessfirst.net.in/sites/default/files/styles/style_600x250/public/club1.jpg?itok=oMBL0kAV");
+    transform: rotateY(200deg)translateZ(430px);
+}
+.image:nth-child(7){
+    background-image: url("https://www.betterup.com/hs-fs/hubfs/man-meditating-in-lotus-pose.jpg?width=866&name=man-meditating-in-lotus-pose.jpg");
+    transform: rotateY(240deg)translateZ(430px);
+}
+.image:nth-child(8){
+    background-image: url("https://asapkerala.gov.in/wp-content/uploads/2021/10/Fitness-Trainer-1.jpg");
+    transform: rotateY(280deg)translateZ(430px);
+}
+.image:nth-child(9){
+    background-image: url("https://www.bosch-presse.de/pressportal/de/media/dam_images/pi11459/fitness.jpg");
+    transform: rotateY(320deg)translateZ(430px);
+}
+</style> 
 </head>
 <body>
-    <div class="container">
-        <div></div>
-        <div class="div-transform">
-            <div class="card card-1 flip-card-1">
-                <img src="https://content.active.com/Assets/Active.com+Content+Site+Digital+Assets/Fitness/Galleries/10+Fitness+Tips/Muscle-confusion-is-the-only-way-to-go..jpg" >   
-            </div>
-
-            <div class="card card-2">
-                <img src="https://burst.shopifycdn.com/photos/cross-fit-rope-workout.jpg?width=500&format=pjpg&exif=1&iptc=1">
-            </div>
-               
-            <div class="card card-3">
-                <img src="https://images.pexels.com/photos/2294361/pexels-photo-2294361.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
-            </div>
-        </div>
-        <div></div>
+<div class="container">
+    <div class="carousel">
+        <div class="image"><span>simple</span></div>
+        <div class="image"><span>carousel</span></div>
+        <div class="image"><span>animation</span></div>
+        <div class="image"><span>with</span></div>
+        <div class="image"><span>beautiful</span></div>
+        <div class="image"><span>landscapes</span></div>
+        <div class="image"><span>follow</span></div>
+        <div class="image"><span>like</span></div>
+        <div class="image"><span>comment</span></div>
     </div>
-    <br>
-    <br>
-    <br>
-        <div class="container">
-            <div></div>
-            <div class="div-transform">
-            <div class="card card-4">
-                <img src="https://cdn.pixabay.com/photo/2016/03/27/07/08/man-1282232__340.jpg">
-            </div>
-               
-            <div class="card card-5">
-                <img src="https://www.fitnessfirst.net.in/sites/default/files/styles/style_600x250/public/club1.jpg?itok=oMBL0kAV">
-            </div>
-
-            <div class="card card-6">
-                <img src="https://cdn.pixabay.com/photo/2017/08/07/14/02/man-2604149__480.jpg">
-            </div>
-            <div></div>
-        </div>
-    </div>
+</div>
 </body>
 </html>
