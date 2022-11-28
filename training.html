@@ -40,10 +40,11 @@
     }
                
     .hero{
-        vertical-align: middle;
+        text-align: center;
         min-height: 100vh;
         position: relative;
         overflow: hidden;
+        text-align: center;
     }
     .bg-overlay{
         background: var(--dark-color);
@@ -70,7 +71,15 @@
         font-weight: var(--font-weight-bold);
         letter-spacing: -1px;
         text-transform: uppercase;
-        margin: 20px 0;
+        margin: 22px 0;
+    }
+
+    h2{
+        font-size: var(--h2-font-size);
+        font-weight: var(--font-weight-bold);
+        letter-spacing: -1px;
+        margin-top: 17%;
+        color: #701254;
     }
 
     h3{
@@ -82,7 +91,7 @@
 
     h4{
         font-size: var(--h4-font-size);
-        color: #701254;
+        /* color: #701254; */
     }
 
     h5{
@@ -119,25 +128,78 @@
         padding: 10px;
         border-radius: 15px;
     }
-    
-   
+
+    .ftco-section{
+        padding: 7em 0;
+        position: relative;
+    }
+
+    .img{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+.inner-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+} 
+.inner-container1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding-right: 5px;
+    margin-right: 10px;
+} 
+.round{
+    border-radius: 50%;
+}  
+.just-a-class{
+    width: 360px;
+}
+
 </style>
 <body>
     <section class="hero d-flex flex-column justify-content-center align-items-center" >
-        <!-- <div class="bg-overlay" style="background: url(C:\Users\Radhika\Desktop\gym3.jpg)"></div>
-        <div class="container"> -->
 
-        <div class="bg-overlay" style="background: url(Assests/gym3.jpg) no-repeat "></div>
-        <div class="conatiner">
-            <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto col-12">
-                    <div class="hero-text mt-5 text-center">
-                        <h4>For your inner peace</h4>
+        <div class="bg-overlay" style="background: url(Assests/gym3.jpg);
+                                        background-position: center;
+                                        background-repeat: center;
+                                        margin: 0px;
+                                        background-attachment: fixed;
+                                        background-size: cover;"></div>
+                        <div class="row">
+                            <div class="hero">
+                        <h2>For your inner peace</h2>
 
                         <h1 class="text-black">
                             Be Alive. Be Strong. Be Relaxed. Be Happy. JustBe.
                         </h1>
                     </div>
+                </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="inner-container">
+                    <img src="Assests/gym4.jpg" class="round"  style="height:235px;">
+                    <img src="Assests/gym5.png" class="round"  style="height:235px;" >
+                    <img src="Assests/gym6.jpg" class="round"  style="height:235px;">
+                </div>
+                <div class="inner-container1">
+                <div class="hero just-a-class">
+                    <h3>Cardio Training</h3>
+                    <p>Cardio is probably the most popular type of exercise out there. Cardio is also one area of exercise that offers limitless kinds of workouts: walking, running, cycling, cross-country skiing, swimming, dancing, you get the idea. Basically, anything that elevates your heart rate to a level above your resting heart rate is cardio.</p>
+                </div>
+                <div class="hero just-a-class">
+                    <h3>Weight Training</h3>
+                    <p>A common misconception is that weight training will lead to one outcome and one outcome only — hypertrophy. But in fact, there are many goals you achieve through resistance training with weights in the form rep and set schemes along with the percentages of your 1Rm (1 rep max) that you are lifting.</p>
+                </div>
+                <div class="hero just-a-class">
+                    <h3>Flexibility Training</h3>
+                    <p>Flexibility is more than being able to touch your toes, it’s about general musculoskeletal health. While some people are born with natural flexibility.</p>
                 </div>
             </div>
         </div>
