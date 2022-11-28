@@ -208,7 +208,7 @@ button{
                     <label for="">Password</label>
                 </div>
                 <div class="remeber">
-                        <label><input name="accept" type="checkbox">   I agree to <a href="terms.html" style="text-decoration:none;color: aqua;">  Terms and Conditions</a></label>
+                        <label><input id="accept" type="checkbox">   I agree to <a href="terms.html" style="text-decoration:none;color: aqua;">  Terms and Conditions</a></label>
                 </div>
                 <button type="submit">Sign Up</button>
                 <div class="signUp-link">
@@ -240,13 +240,12 @@ function validateSIn(){
         alert("Password too short!!")
         return false;
     }
-function validateSUp(){;
-    var chkbxsup=document.myformSignUp.accept.value;
+}
+function validateSUp(){
     var namesup =document.myformSignUp.Uname.value;
     var pswdsup =document.myformSignUp.passwd.value;
     var mailsup =document.myformSignUp.mail.value;
-    //check box validation
-    if(chkbxsup==null || chkbxsup==""){
+    if(!document.getElementById('accept').checked){
         alert("Please accept the terms and conditions");
         return false;
     }
@@ -254,18 +253,18 @@ function validateSUp(){;
         alert("Username Could not be Blank!!");
         return false;
     }
+    else if(mailsup==null || mailsup==""){
+        alert("Email Could not be Blank!!");
+        return false;
+    }
     else if(pswdsup.length<6){
         alert("Password too short!!");
         return false;
     }
-    else if(mailsup==null || mailsup==""){
-        alert("Email Could not be Blank!!");
-        return false;
-    return false;
+    
     }
-}
 
-}
+
 </script>
 </body>
 </html>
