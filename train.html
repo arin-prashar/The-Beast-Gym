@@ -165,9 +165,82 @@
 .just-a-class{
     width: 360px;
 }
+li,a,button{
+    font-family: "Montserrat",sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+}
+header,footer{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.logo{
+    width: 70px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.nav__lnk,.ftr_nav_lnk{
+    list-style:none;
+}
+.nav__lnk li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav__lnk li a{
+    transition: all 0.4s ease 0s;
+}
+.nav__lnk li a button{
+    font-weight: bold;
+    border: inherit;
+    background: inherit;
+    transition: transform .4s ease 0s;
+}
+.nav__lnk li a button:hover{
+    font-weight: bolder;
+    color: darkred;
+    transform: scale(1.2);
+}
+.ftr_nav_lnk li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.ftr_nav_lnk li a{
+    transition: all 0.4s ease 0s;
+}
+.ftr_nav_lnk li a button{
+    font-weight: bold;
+    border: inherit;
+    background: inherit;
+    transition: transform .4s ease 0s;
+}
+.ftr_nav_lnk li a button:hover{
+    font-weight: bolder;
+    color:darkred;
+    transform: scale(1.2);
+}
 
 </style>
 <body>
+    <header>
+        <img class="logo" src="Assests/Head.svg" alt="logo">
+        <h1 style="color:#251225;">The Beast Gym</h1>
+        <nav>
+            <ul class="nav__lnk">
+                <li><a href="Home.html"><button>Home</button></a></li>
+                <li><a href="train.html"><button>Training</button></a></li>
+                <li><a href="timetable.html"><button>TimeTable</button></a></li>
+                <li><a href="ntr.html"><button>Nutrition</button></a></li>
+                <li><a href="gallery.html"><button>Gallery</button></a></li>
+            </ul>
+        </nav>
+    </header>
     <section class="hero d-flex flex-column justify-content-center align-items-center" >
 
         <div class="bg-overlay" style="background: url(Assests/gym3.jpg);
@@ -229,7 +302,7 @@
                 <br>
                 5.This is one rep. Complete 3 sets of 10 reps as a beginner.
             </p>
-            <img src="C:\Users\Radhika\Documents\Github\The-Beast-Gym-2\Assests\burpees.jfif">
+            <img src="Assests\burpees.jfif">
             <h3>2.Squats</h3>
             <p>Squats increase lower body and core strength, as well as flexibility in your lower back and hips. Because they engage some of the largest muscles in the body, they also pack a major punch in terms of calories burned.
                 <br>
@@ -241,7 +314,7 @@
                 <br>
                 4.Complete 3 sets of 20 reps.
             </p>
-            <img src="C:\Users\Radhika\Documents\Github\The-Beast-Gym-2\Assests\squats.jfif">
+            <img src="Assests\squats.jfif">
             <h3>3.Rowing Machine</h3>
             <p>The rowing machine offers a total body workout. Additionally, it has the benefit of being impact free, and it does not involve bearing weight.
                 <br>
@@ -255,14 +328,14 @@
                 <br>
                 5.Fully extend the legs, then pull the arms back and bend the knees.
             </p>
-            <img src="C:\Users\Radhika\Documents\Github\The-Beast-Gym-2\Assests\htk1.jfif">
+            <img src="Assests\htk1.jfif">
             <h3>4.Treadmill</h3>
             <p>A person using a treadmill is essentially running but with less impact on their joints. The treadmill is also easily adjustable for each individual's needs.
 
                 A person using a treadmill should start at a pace that suits their fitness level.
                 
             </p>
-            <img src="C:\Users\Radhika\Documents\Github\The-Beast-Gym-2\Assests\treadmill.jfif">
+            <img src="Assests\treadmill.jfif">
         <h2 class="top">Weight Training</h2><br>
             <h3>1.Standing Overhead Dumbbell Presses</h3>
             <p>Compound exercises, which utilize multiple joints and muscles, are perfect for busy bees as they work several parts of your body at once. A standing overhead press isn't only one of the best exercises you can do for your shoulders, but it also engages your upper back and core.
@@ -275,7 +348,7 @@
                 <br>
                 4.Complete 3 sets of 12 reps.
             </p>
-            <img src="C:\Users\Radhika\Documents\Github\The-Beast-Gym-2\Assests\overhead press.jfif">
+            <img src="Assests\overhead press.jfif">
             <h3>2.Single-Leg Deadlifts</h3>
             <p>This is another exercise that challenges your balance. Single-leg deadlifts require stability and leg strength. Grab a light to moderate dumbbell to complete this move.
                 <br>
@@ -287,7 +360,7 @@
                 <br>
                 4.Repeat 10 to 12 reps before moving the weight to your left hand and repeating the same steps on the left leg.
             </p>
-            <img src="C:\Users\Radhika\Documents\Github\The-Beast-Gym-2\Assests\deadlift.jfif">
+            <img src="Assests\deadlift.jfif">
             <h3>3.Dumbbell rows</h3>
             <p> Not only will these make your back look killer in that dress, but dumbbell rows are also another compound exercise that strengthens multiple muscles in your upper body. Choose a moderate-weight dumbbell and ensure that you're squeezing at the top of the movement.
                 <br>
@@ -299,7 +372,7 @@
                 <br>
                 4.Return to the starting position and repeat with the left arm. This is one rep. Repeat 10 times for 3 sets.
             </p>
-            <img src="C:\Users\Radhika\Documents\Github\The-Beast-Gym-2\Assests\dumbbel rows.jfif">
+            <img src="Assests\dumbbel rows.jfif">
         <h2 class="top">Flexibility Training</h2>
             <h3>1.Intense Side Stretch (Parsvottanasana)</h3>
             <p>This forward bend stretches your spine, legs, and hips and can work wonders foThis forward bend stretches your spine, legs, and hips and can work wonders for your balance, posture, and digestion.r your balance, posture, and digestion.
@@ -318,7 +391,7 @@
                 <br>
                 7.Swap the positions of your feet (right foot forward now!) and repeat.
             </p>
-            <img src="C:\Users\Radhika\Documents\Github\The-Beast-Gym-2\Assests\intense stretch.jfif">
+            <img src="Assests\intense stretch.jfif">
             <h3>2.Head to Knee</h3>
             <p>This pose is great for increasing flexibility in your hips, thighs, and back while also increasing blood flow in your lower abs and relieving stress.
                 <br>
@@ -336,7 +409,7 @@
                 <br>
                 7.Remain in this pose for 1-2 minutes.
             </p>
-            <img src="C:\Users\Radhika\Documents\Github\The-Beast-Gym-2\Assests\htk1.jfif">
+            <img src="Assests\htk1.jfif">
             <h3>3.Side Bend</h3>
             <p>Core with an emphasis on obliques; lats and shoulder girdle stabilizers.
                 <br>
@@ -348,7 +421,18 @@
                 <br>
                 4.Inhale to bend back down over the ball, stretching the side of your body.
             </p>
-            <img src="C:\Users\Radhika\Documents\Github\The-Beast-Gym-2\Assests\side bend.jfif">
+            <img src="Assests\side bend.jfif">
     </section>
+    <footer>
+        <div></div>
+        <nav>
+            <ul class="ftr_nav_lnk">
+                <li><a href="terms.html"><button>Terms and Conditions</button></a></li>
+                <li><a href="contact.html"><button>Contact Us</button></a></li>
+                <li><a href="privacy.html"><button>Privacy Policy</button></a></li>
+            </ul>
+        </nav>
+        <div></div>
+    </footer>
 </body>
 </html>
